@@ -6,21 +6,16 @@
 //   side nav
 .example-container {
     position: absolute;
-    top: 0;
+    top: 64px;
     bottom: 0;
     left: 0;
     right: 0;
     // background: #eee;
-    z-index: -10;
+    // z-index: -10;
 
     .left-sidbar {
       width: 15rem;
-      .navigation{
-        margin-top: 64px;
-      }
     }
+
   }
 
-.main-content {
-  margin-top: 64px;
-}

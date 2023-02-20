@@ -340,16 +340,12 @@
 <mat-sidenav-container class="example-container" *ngIf="true">
   <mat-sidenav class="left-sidbar" mode="side" [opened]="showLeftNav">
     <mat-nav-list class="navigation">
-      <mat-list-item>
-        <a matListItemTitle href="...">Page 1</a>
-        <button mat-icon-button matListItemMeta>
-          <mat-icon>info</mat-icon>
-       </button>
+      <mat-list-item (click)="navigateTo(route.path)" *ngFor="let route of routes" [activated]="route.isActive">
+        <span matListItemIcon>
+          <mat-icon>{{ route.icon }}</mat-icon>
+        </span>
+        <a matListItemTitle [href]="route.path">{{ route.page }}</a>
       </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>Page 2</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>Page 3</mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav position="end" opened="false">End</mat-sidenav>
@@ -358,10 +354,5 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<!-- 
-<mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side">Start</mat-sidenav>
-  <mat-sidenav position="start" opened>Start 2</mat-sidenav>
-  <mat-sidenav-content>Main content</mat-sidenav-content>
-</mat-sidenav-container> -->
+
 
