@@ -9,6 +9,7 @@ import { Router, Route, NavigationEnd } from '@angular/router';
 export class AppComponent {
   title = 'automation-client-presentation';
   showLeftNav = false
+  showRightNav = false
   routes: any[] = []
 
   constructor(private router: Router) {
@@ -27,9 +28,10 @@ export class AppComponent {
           case 'final': icon = 'weekend';break;            
         }
 
+        const page = (v.path?.charAt(0).toUpperCase() || '' )+ v.path?.substring(1)
         this.routes.push({
           icon,
-          page: v.path?.toUpperCase(),
+          page,
           path: v.path,
           isActive: false
         })
@@ -69,6 +71,10 @@ export class AppComponent {
 
   onMenuClick() {
     this.showLeftNav = !this.showLeftNav
+  }
+
+  onNotify() {
+    this.showRightNav = !this.showRightNav
   }
 
   navigateTo(path: string) {

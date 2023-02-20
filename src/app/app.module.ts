@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSidenavModule,
     MatListModule,
     MatDividerModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
