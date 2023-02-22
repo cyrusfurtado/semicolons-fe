@@ -15,10 +15,16 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
+import { UserLoginComponent } from './user-login/user-login.component';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    UserLoginComponent,
+    VideoPlayerComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatListModule,
     MatDividerModule,
     MatBadgeModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
