@@ -4,34 +4,39 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './landing/landing.component';
 import { NotesComponent } from './notes/notes.component';
-import { ScanComponent } from './scan/scan.component';
+import { SlideComponent } from './slide/slide.component';
 import { SummaryComponent } from './summary/summary.component';
-import { PresentationComponent } from './presentation/presentation.component';
-import { FinalComponent } from './final/final.component';
+import { VideoComponent } from './video/video.component';
+// import { FinalComponent } from './final/final.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 
-const routes: Routes = [{
+const routes: Routes = [
+  {
   path: 'landing',
   component: LandingComponent
 },
 {
-  path: 'notes',
-  component: NotesComponent
-},{
-  path: 'scan',
-  component: ScanComponent
+  path: 'slides',
+  component: SlideComponent
 },
 {
-  path: 'summary',
+  path: 'videos',
+  component: VideoComponent
+},
+{
+  path: 'meet-notes',
+  component: NotesComponent
+},
+{
+  path: 'test-cases',
   component: SummaryComponent
-},{
-  path: 'presentation',
-  component: PresentationComponent
-},{
-  path: 'final',
-  component: FinalComponent
-},{
+},
+// {
+//   path: 'final',
+//   component: FinalComponent
+// },
+{
   path: '',
   redirectTo: 'landing',
   pathMatch: 'full'

@@ -16,7 +16,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
 import { UserLoginComponent } from './user-login/user-login.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 
@@ -44,6 +46,7 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
     MatDividerModule,
     MatBadgeModule,
     MatInputModule,
+    MatMenuModule,
     ReactiveFormsModule,
     FormsModule,
     VgCoreModule,
