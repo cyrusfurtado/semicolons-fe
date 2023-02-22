@@ -20,6 +20,12 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 
+
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +46,10 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
