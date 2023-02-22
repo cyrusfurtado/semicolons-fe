@@ -9,6 +9,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { FinalComponent } from './final/final.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 const routes: Routes = [{
   path: 'landing',
@@ -34,6 +35,10 @@ const routes: Routes = [{
   path: '',
   redirectTo: 'landing',
   pathMatch: 'full'
+},
+{
+  path: 'login',
+  component: UserLoginComponent
 },
 {
   path: '**',
