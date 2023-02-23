@@ -21,12 +21,14 @@ import { CommonMaterialModule } from './common.material.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptorService } from './app-interceptor.service';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
     GoogleAuthComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,

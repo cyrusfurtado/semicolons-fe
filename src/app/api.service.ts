@@ -12,7 +12,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getUrl(): Observable<any>{
-    return this.http.get('https://www.google.co.in')
+    return this.http.get('http://demo9987923.mockable.io/get/test')
   }
 
 }

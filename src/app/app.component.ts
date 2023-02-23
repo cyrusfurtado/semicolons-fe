@@ -77,7 +77,8 @@ export class AppComponent {
 
     this.helper.loader.subscribe((e) => this.hideLoader = e.hide)
 
-    // this.api.getUrl().subscribe(() => {});
+    // const t = setInterval(() => {this.api.getUrl().subscribe(() => {})}, 2000)
+    // setTimeout(() => clearInterval(t), 5000)
   }
 
   onMenuClick() {

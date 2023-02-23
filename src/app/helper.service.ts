@@ -5,6 +5,7 @@ import { EventEmitter, Injectable, Output } from '@angular/core';
 })
 export class HelperService {
   @Output() loader = new EventEmitter()
+  @Output() event = new EventEmitter()
 
   constructor() { }
 }

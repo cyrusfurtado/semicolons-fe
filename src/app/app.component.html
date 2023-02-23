@@ -327,14 +327,7 @@
     </button>
     <span>Automated Presentation System</span>
     <span class="example-spacer"></span>
-    <button 
-      mat-icon-button 
-      class="example-icon favorite-icon" 
-      aria-label="Example icon-button with heart icon"
-      (click)="onNotify()"
-    >
-      <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
-    </button>
+    <app-notification></app-notification>
     <button 
       mat-icon-button 
       [matMenuTriggerFor]="menu"
@@ -387,29 +380,23 @@
     position="end" 
     [opened]="showRightNav"
   >
-  <mat-list>
+  <!-- <mat-list>
     <mat-list-item>
       <span matListItemIcon>
-        <mat-icon color="primary">home</mat-icon>
+        <mat-icon color="primary">check_circle</mat-icon>
       </span>
       <span matListItemTitle>Pepper</span>
       <span matListItemLine>Produced by a plant</span>
     </mat-list-item>
     <mat-list-item>
       <span matListItemIcon>
-        <mat-icon color="accent">send</mat-icon>
-      </span>
-      <span matListItemTitle>Salt</span>
-      <span matListItemLine>Extracted from sea water</span>
-    </mat-list-item>
-    <mat-list-item>
-      <span matListItemIcon>
-        <mat-icon color="warn">trending_up</mat-icon>
+        <mat-icon color="warn">do_not_disturb_on</mat-icon>
       </span>
       <span matListItemTitle>Paprika</span>
       <span matListItemLine>Produced by dried and ground red peppers</span>
     </mat-list-item>
-  </mat-list>
+  </mat-list> -->
+    <!-- <app-notification (update)="updateNotificationCount($event)"></app-notification> -->
   </mat-sidenav>
   <mat-sidenav-content class="main-content">
     <router-outlet></router-outlet>
