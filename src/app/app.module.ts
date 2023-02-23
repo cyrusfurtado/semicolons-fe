@@ -16,7 +16,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
 import { UserLoginComponent } from './user-login/user-login.component';
+
 import {MatInputModule} from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 
@@ -59,6 +61,7 @@ import { SlidePageComponent } from './slide-page/slide-page.component';
     MatDividerModule,
     MatBadgeModule,
     MatInputModule,
+    MatMenuModule,
     ReactiveFormsModule,
     FormsModule,
     VgCoreModule,

@@ -1,24 +1,24 @@
 // toolbar
 .example-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
 //   side nav
 .example-container {
-    position: absolute;
-    top: 64px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    // background: #eee;
-    // z-index: -10;
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background: #eee;
+  // z-index: -10;
 
-    .left-sidbar {
-      width: 15rem;
-    }
-
-    .right-sidbar {
-      width: 25rem;
-    }
+  .left-sidbar {
+    width: 15rem;
   }
+
+  .right-sidbar {
+    width: 25rem;
+  }
+}
 

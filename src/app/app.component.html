@@ -314,7 +314,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
-<p>
+<p [hidden]="toolbarHidden">
   <mat-toolbar color="primary">
     <button 
       mat-icon-button 
@@ -335,21 +335,51 @@
     >
       <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button 
+      mat-icon-button 
+      [matMenuTriggerFor]="menu"
+      class="example-icon" 
+      aria-label="Example icon-button with share icon"
+    >
       <mat-icon>person</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable notifications</span>
+      </button>
+      <button mat-menu-item [routerLink]="[{ outlets: { global: ['login'] } }]" >
+      <!-- <button mat-menu-item (click)="logOut()" > -->
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sign Out</span>
+      </button>
+    </mat-menu>
   </mat-toolbar>
 </p>
 
-<mat-sidenav-container class="example-container" *ngIf="true">
+<mat-sidenav-container class="example-container" *ngIf="!toolbarHidden">
   <mat-sidenav class="left-sidbar" mode="side" [opened]="showLeftNav">
     <mat-nav-list class="navigation">
-      <mat-list-item (click)="navigateTo(route.path)" *ngFor="let route of routes" [activated]="route.isActive">
-        <span matListItemIcon>
-          <mat-icon>{{ route.icon }}</mat-icon>
-        </span>
-        <a matListItemTitle [href]="route.path">{{ route.page }}</a>
-      </mat-list-item>
+      <ng-container  *ngFor="let route of routes">
+        <mat-list-item 
+          (click)="navigateTo(route.path)" 
+          [activated]="route.isActive"
+        >
+          <span matListItemIcon>
+            <mat-icon>{{ route.icon }}</mat-icon>
+          </span>
+          <a matListItemTitle [href]="route.path">{{ route.page }}</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </ng-container>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav 
@@ -387,5 +417,4 @@
 </mat-sidenav-container>
 
 
-<!-- 
-<app-video-player></app-video-player> -->
+<router-outlet name="global"></router-outlet>
