@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Router, Route, NavigationEnd, NavigationExtras, ActivatedRoute } from '@angular/router';
+import { Router, NavigationEnd, NavigationExtras } from '@angular/router';
+import { ApiService } from './api.service';
+import { HelperService } from './helper.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +14,9 @@ export class AppComponent {
   showLeftNav = false
   showRightNav = false
   routes: any[] = []
+  hideLoader = true
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private helper: HelperService, private api: ApiService) {
     const routes = this.router.config
 
     const skipList = ['landing','login','', '**']
@@ -70,7 +73,11 @@ export class AppComponent {
 
         console.log("routes on nav end", this.routes)
       }
-    })
+    });
+
+    this.helper.loader.subscribe((e) => this.hideLoader = e.hide)
+
+    // this.api.getUrl().subscribe(() => {});
   }
 
   onMenuClick() {
