@@ -23,7 +23,8 @@ export class AppComponent {
 
         let icon = 'battery_unknown'
         switch(v.path) {
-          case 'landing': icon = 'home';break;
+          case 'landing': icon = 'home';break; // cloud_upload
+          case 'upload': icon = 'cloud_upload';break;
           case 'meet-notes': icon = 'people';break;
           case 'slides': icon = 'slideshow';break;
           case 'test-cases': icon = 'medical_information';break;
