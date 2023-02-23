@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule, Component } from '@angular/core';
 import { CommonMaterialModule } from '../common.material.module';
 import { SlideViewComponent } from '../slide-view/slide-view.component';
@@ -14,7 +15,7 @@ export class SlideComponent {
 
 
 @NgModule({
-  imports: [CommonMaterialModule],
+  imports: [CommonMaterialModule, CommonModule],
   exports: [],
   declarations: [SlidesTabComponent, SlideViewComponent, SlideComponent]
 })

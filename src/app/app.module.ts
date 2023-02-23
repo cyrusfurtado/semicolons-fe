@@ -19,13 +19,17 @@ import { NgxDocViewerModule } from 'ngx-doc-viewer';
 import { UploadDataComponent } from './upload-data/upload-data.component';
 
 import { CommonMaterialModule } from './common.material.module';
+import { HttpClientModule } from '@angular/common/http';
+// import { NotesViewComponent } from './notes-view/notes-view.component';
+// import { NotesTabComponent } from './notes-tab/notes-tab.component';
+// import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
     GoogleAuthComponent,
-    UploadDataComponent,
+    UploadDataComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { CommonMaterialModule } from './common.material.module';
     ReactiveFormsModule,
     FormsModule,
     NgxDocViewerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
