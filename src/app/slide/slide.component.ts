@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { CommonMaterialModule } from '../common.material.module';
+import { SlideViewComponent } from '../slide-view/slide-view.component';
+import { SlidesTabComponent } from '../slides-tab/slides-tab.component';
 
 @Component({
   selector: 'app-scan',
@@ -8,3 +11,11 @@ import { Component } from '@angular/core';
 export class SlideComponent {
 
 }
+
+
+@NgModule({
+  imports: [CommonMaterialModule],
+  exports: [],
+  declarations: [SlidesTabComponent, SlideViewComponent, SlideComponent]
+})
+export class SlideModule {}

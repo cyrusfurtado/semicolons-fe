@@ -8,8 +8,21 @@ import {MatButtonModule} from '@angular/material/button';
 
 import {MatCardModule} from '@angular/material/card';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatDividerModule} from '@angular/material/divider';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatInputModule} from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+
 @NgModule({
     imports: [
+      MatToolbarModule,
+      MatSidenavModule,
+      MatDividerModule,
+      MatBadgeModule,
+      MatInputModule,
+      MatMenuModule,
       MatGridListModule,
       MatListModule,
       MatIconModule,
@@ -17,6 +30,12 @@ import {MatCardModule} from '@angular/material/card';
       MatCardModule,
     ],
     exports: [
+        MatToolbarModule,
+        MatSidenavModule,
+        MatDividerModule,
+        MatBadgeModule,
+        MatInputModule,
+        MatMenuModule,
         MatGridListModule,
         MatListModule,
         MatIconModule,
