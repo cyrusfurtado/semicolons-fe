@@ -12,23 +12,27 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { GoogleAuthComponent } from './google-auth/google-auth.component';
-import { SlideViewComponent } from './slide-view/slide-view.component';
 
 // doc viewer
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
-import { UploadDataComponent } from './upload-data/upload-data.component';
 
 import { CommonMaterialModule } from './common.material.module';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppInterceptorService } from './app-interceptor.service';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
     GoogleAuthComponent,
-    UploadDataComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CommonMaterialModule,
@@ -36,7 +40,16 @@ import { CommonMaterialModule } from './common.material.module';
     FormsModule,
     NgxDocViewerModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AppInterceptorService,
+    multi: true
+  },
+  // required for custom icons for the stepper
+  {
+    provide: STEPPER_GLOBAL_OPTIONS,
+    useValue: { displayDefaultIndicatorType: false }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

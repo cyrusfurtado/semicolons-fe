@@ -18,6 +18,10 @@ const routes: Routes = [
   component: LandingComponent
 },
 {
+  path: 'upload',
+  component: UploadDataComponent,
+},
+{
   path: 'slides',
   component: SlideComponent
 },
@@ -46,10 +50,6 @@ const routes: Routes = [
   path: '',
   redirectTo: 'landing',
   pathMatch: 'full'
-},
-{
-  path: 'upload',
-  component: UploadDataComponent,
 },
 {
   path: '**',

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { StepperModule } from '../stepper/stepper.component';
 
 @Component({
   selector: 'app-notes',
@@ -8,3 +9,9 @@ import { Component } from '@angular/core';
 export class NotesComponent {
 
 }
+
+@NgModule({
+  declarations: [NotesComponent],
+  imports: [StepperModule]
+})
+export class NotesModule {}
