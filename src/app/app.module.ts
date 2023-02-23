@@ -15,19 +15,18 @@ import { GoogleAuthComponent } from './google-auth/google-auth.component';
 
 // doc viewer
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
-import { UploadDataComponent } from './upload-data/upload-data.component';
 
 import { CommonMaterialModule } from './common.material.module';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptorService } from './app-interceptor.service';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
     GoogleAuthComponent,
-    UploadDataComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +42,11 @@ import { AppInterceptorService } from './app-interceptor.service';
     provide: HTTP_INTERCEPTORS,
     useClass: AppInterceptorService,
     multi: true
+  },
+  // required for custom icons for the stepper
+  {
+    provide: STEPPER_GLOBAL_OPTIONS,
+    useValue: { displayDefaultIndicatorType: false }
   }],
   bootstrap: [AppComponent]
 })

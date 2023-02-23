@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { StepperModule } from '../stepper/stepper.component';
 
 @Component({
   selector: 'app-summary',
@@ -8,3 +9,9 @@ import { Component } from '@angular/core';
 export class SummaryComponent {
 
 }
+
+@NgModule({
+  declarations: [SummaryComponent],
+  imports: [StepperModule]
+})
+export class SummaryModuel {}
