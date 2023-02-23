@@ -18,19 +18,34 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { UserLoginComponent } from './user-login/user-login.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 import { VideoPlayerComponent } from './video-player/video-player.component';
-
-
 import { VgCoreModule } from '@videogular/ngx-videogular/core';
 import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+import { GoogleAuthComponent } from './google-auth/google-auth.component';
+import { SlideViewComponent } from './slide-view/slide-view.component';
+
+// doc viewer
+import { NgxDocViewerModule } from 'ngx-doc-viewer';
+import { UploadDataComponent } from './upload-data/upload-data.component';
+import { SlidesTabComponent } from './slides-tab/slides-tab.component';
+import { SlidePageComponent } from './slide-page/slide-page.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
     VideoPlayerComponent,
+    GoogleAuthComponent,
+    SlideViewComponent,
+    UploadDataComponent,
+    SlidesTabComponent,
+    SlidePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +65,8 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
+    NgxDocViewerModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

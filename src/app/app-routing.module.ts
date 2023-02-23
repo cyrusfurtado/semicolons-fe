@@ -10,6 +10,8 @@ import { PresentationComponent } from './presentation/presentation.component';
 import { FinalComponent } from './final/final.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { UploadDataComponent } from './upload-data/upload-data.component';
+import { SlidePageComponent } from './slide-page/slide-page.component';
 
 const routes: Routes = [{
   path: 'landing',
@@ -39,6 +41,14 @@ const routes: Routes = [{
 {
   path: 'login',
   component: UserLoginComponent
+},
+{
+  path: 'upload',
+  component: UploadDataComponent,
+},
+{
+  path: 'slides',
+  component: SlidePageComponent,
 },
 {
   path: '**',
