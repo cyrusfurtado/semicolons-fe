@@ -356,7 +356,8 @@
         <mat-icon>notifications_off</mat-icon>
         <span>Disable notifications</span>
       </button>
-      <button mat-menu-item (click)="logOut()" >
+      <button mat-menu-item [routerLink]="[{ outlets: { global: ['login'] } }]" >
+      <!-- <button mat-menu-item (click)="logOut()" > -->
         <mat-icon>exit_to_app</mat-icon>
         <span>Sign Out</span>
       </button>
@@ -364,7 +365,7 @@
   </mat-toolbar>
 </p>
 
-<mat-sidenav-container class="example-container" *ngIf="true">
+<mat-sidenav-container class="example-container" *ngIf="!toolbarHidden">
   <mat-sidenav class="left-sidbar" mode="side" [opened]="showLeftNav">
     <mat-nav-list class="navigation">
       <ng-container  *ngFor="let route of routes">
@@ -416,5 +417,4 @@
 </mat-sidenav-container>
 
 
-<!-- 
-<app-video-player></app-video-player> -->
+<router-outlet name="global"></router-outlet>

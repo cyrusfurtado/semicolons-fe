@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+
+import { NgModule, Component } from '@angular/core';
+import { CommonMaterialModule } from '../common.material.module';
+import { VideoPlayerModule } from '../video-player/video-player.component'
 
 @Component({
   selector: 'app-presentation',
@@ -8,3 +11,12 @@ import { Component } from '@angular/core';
 export class VideoComponent {
 
 }
+
+@NgModule({
+  imports:[CommonMaterialModule, VideoPlayerModule],
+  declarations:[VideoComponent]
+})
+export class VideoComponentModule {
+
+}
+

@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
-import videojs from 'video.js';
-import VideoJsPlayerOptions from 'video.js';
+import { Component, NgModule } from '@angular/core';
+
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
 @Component({
   selector: 'app-video-player',
@@ -36,4 +39,12 @@ export class VideoPlayerComponent {
   // }
 
 
+}
+
+@NgModule({
+  imports: [VgCoreModule, VgControlsModule, VgOverlayPlayModule, VgBufferingModule],
+  exports:[VideoPlayerComponent],
+  declarations: [VideoPlayerComponent]
+})
+export class VideoPlayerModule {
 }

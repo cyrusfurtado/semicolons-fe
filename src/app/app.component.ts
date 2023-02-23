@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, Route, NavigationEnd } from '@angular/router';
+import { Router, Route, NavigationEnd, NavigationExtras, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent {
   showRightNav = false
   routes: any[] = []
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private route: ActivatedRoute) {
     const routes = this.router.config
 
     const skipList = ['landing','login','', '**']
@@ -50,7 +50,7 @@ export class AppComponent {
         const url = event.url
         const path = url.substring(1)
 
-        this.toolbarHidden = path == 'login' ? true : false
+        this.toolbarHidden = path.indexOf('(global:login)') > -1 ? true : false
         console.log("navigation end url", path, path.length,  this.toolbarHidden)
 
         this.routes.map(r => {
@@ -85,6 +85,11 @@ export class AppComponent {
   }
 
   logOut() {
-    this.navigateTo('login')
+    const navigationExtras: NavigationExtras = {
+      // relativeTo: this.route,
+      // queryParams: { id: 123 },
+      // state: { data: 'some data' }
+    };
+    this.router.navigate([{ outlets: { global: ['login'] } }], navigationExtras);
   }
 }

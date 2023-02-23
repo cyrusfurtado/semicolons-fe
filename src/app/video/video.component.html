@@ -1,1 +1,34 @@
-<p>presentation works!</p>
+<div>
+<mat-grid-list cols="4" rowHeight="1:2" gutterSize="15">
+    <mat-grid-tile class="video-list" colspan="1">
+        <!-- <mat-grid-tile-header>Header</mat-grid-tile-header> -->
+        <mat-card class="list-card">
+            <mat-list>
+                <mat-list-item>
+                    <mat-icon>video_file</mat-icon>
+                <span matListItemTitle>Pepper</span>
+                <span matListItemLine>Produced by a plant</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                <span matListItemTitle>Salt</span>
+                <span matListItemLine>Extracted from sea water</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                <span matListItemTitle>Paprika</span>
+                <span matListItemLine>Produced by dried and ground red peppers</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
+        </mat-card>
+        <!-- <mat-grid-tile-footer>Footer</mat-grid-tile-footer> -->
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+        <mat-card class="video-card">
+            <app-video-player></app-video-player>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+</div>
+

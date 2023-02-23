@@ -37,13 +37,14 @@ const routes: Routes = [
 //   component: FinalComponent
 // },
 {
+  path: 'login',
+  component: UserLoginComponent,
+  outlet: 'global'
+},
+{
   path: '',
   redirectTo: 'landing',
   pathMatch: 'full'
-},
-{
-  path: 'login',
-  component: UserLoginComponent
 },
 {
   path: '**',

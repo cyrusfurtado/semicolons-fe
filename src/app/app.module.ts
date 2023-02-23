@@ -20,19 +20,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { VideoPlayerComponent } from './video-player/video-player.component';
-
-
-import { VgCoreModule } from '@videogular/ngx-videogular/core';
-import { VgControlsModule } from '@videogular/ngx-videogular/controls';
-import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
-import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
-    VideoPlayerComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,10 +41,6 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
     MatMenuModule,
     ReactiveFormsModule,
     FormsModule,
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
