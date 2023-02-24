@@ -11,6 +11,7 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
   styleUrls: ['./video-player.component.scss']
 })
 export class VideoPlayerComponent {
+  video_url = "../../assets/video/fridayoutput.mp4";
   // options = {};
 
   // player = videojs('my-player', this.options, function onPlayerReady() {

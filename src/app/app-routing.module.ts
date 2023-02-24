@@ -19,32 +19,32 @@ const routes: Routes = [
   {
   path: 'landing',
   component: LandingComponent,
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
 },
 {
   path: 'dashboard',
   component: UploadDataComponent,
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
 },
 {
   path: 'slides',
   component: SlideComponent,
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
 },
 {
   path: 'videos',
   component: VideoComponent,
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
 },
 {
   path: 'meet-notes',
   component: NotesComponent,
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
 },
 {
   path: 'test-cases',
   component: SummaryComponent,
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
 },
 // {
 //   path: 'final',
@@ -58,7 +58,7 @@ const routes: Routes = [
 {
   path: 'steper',
   component: DashStepperComponent,
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
 },
 {
   path: 'login',

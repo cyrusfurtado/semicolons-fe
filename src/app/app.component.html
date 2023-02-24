@@ -350,7 +350,7 @@
         <mat-icon>notifications_off</mat-icon>
         <span>Disable notifications</span>
       </button>
-      <button mat-menu-item [routerLink]="[{ outlets: { global: ['login'] } }]" >
+      <button (click)="signout()" mat-menu-item [routerLink]="[{ outlets: { global: ['login'] } }]" >
       <!-- <button mat-menu-item (click)="logOut()" > -->
         <mat-icon>exit_to_app</mat-icon>
         <span>Sign Out</span>
