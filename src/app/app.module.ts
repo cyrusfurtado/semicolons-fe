@@ -28,6 +28,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptorService } from './app-interceptor.service';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { NotificationComponent } from './notification/notification.component';
+import { DashStepperComponent } from './dash-stepper/dash-stepper.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NotificationComponent } from './notification/notification.component';
     UserLoginComponent,
     GoogleAuthComponent,
     NotificationComponent,
+    DashStepperComponent,
   ],
   imports: [
     BrowserModule,

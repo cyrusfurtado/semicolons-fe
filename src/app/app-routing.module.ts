@@ -12,6 +12,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UploadDataComponent } from './upload-data/upload-data.component';
 import { AuthGuard } from './shared/auth.guard';
+import { StepperComponent } from './stepper/stepper.component';
+import { DashStepperComponent } from './dash-stepper/dash-stepper.component';
 
 const routes: Routes = [
   {
@@ -53,11 +55,11 @@ const routes: Routes = [
   redirectTo: 'landing',
   pathMatch: 'full',
 },
-// {
-//   path: 'dashboard',
-//   component: UploadDataComponent,
-//   // canActivate: [AuthGuard]
-// },
+{
+  path: 'steper',
+  component: DashStepperComponent,
+  // canActivate: [AuthGuard]
+},
 {
   path: 'login',
   component: UserLoginComponent,
