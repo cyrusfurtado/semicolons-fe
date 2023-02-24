@@ -1,22 +1,27 @@
 <!-- <p>upload-data works!</p> -->
+<app-stepper [step]="1"></app-stepper>
 
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-        <mat-label>Meeting Transcript</mat-label>
-        <textarea matInput placeholder="Your meeting transcript goes here..." rows="8"></textarea>
-    </mat-form-field>
-
-    <!-- <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button> -->
-    <div class="form-format">
-        <span>
-            <label for="file" class="label">Choose Test Case File</label>
-            <input (change)="onFileSelected()" #fileInput type="file" id="file">
-        </span>
+<!-- <mat-grid-list cols="4" rowHeight="16:9" gutterSize="15"> -->
+    <!-- <mat-grid-tile colspan="4"> -->
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Meeting Transcript</mat-label>
+                <textarea matInput placeholder="Your meeting transcript goes here..." rows="8"></textarea>
+            </mat-form-field>
         
-        <span>
-            <label for="upload-btn" class="label" id="label2">Upload Data</label>
-            <button mat-raised-button color="primary">Upload</button>
-        </span>
-    </div>
-
-</form>
+            <!-- <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button> -->
+            <div class="form-format">
+                <span>
+                    <label for="file" class="label">Choose Test Case File</label>
+                    <input (change)="onFileSelected()" #fileInput type="file" id="file">
+                </span>
+                
+                <span>
+                    <label for="upload-btn" class="label" id="label2">Upload Data</label>
+                    <button mat-raised-button color="primary">Upload</button>
+                </span>
+            </div>
+        
+        </form>
+    <!-- </mat-grid-tile> -->
+<!-- </mat-grid-list> -->

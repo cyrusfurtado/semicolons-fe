@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { CommonMaterialModule } from '../common.material.module';
+import { StepperModule } from '../stepper/stepper.component';
 
 @Component({
   selector: 'app-upload-data',
@@ -6,8 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./upload-data.component.scss']
 })
 export class UploadDataComponent {
-  onFileSelected()
-  {
+  onFileSelected(){
     
   }
 }
+
+@NgModule({
+  declarations: [UploadDataComponent],
+  imports: [CommonMaterialModule, StepperModule]
+})
+export class UploadModule {}

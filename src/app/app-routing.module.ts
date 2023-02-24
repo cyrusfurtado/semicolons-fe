@@ -20,6 +20,10 @@ const routes: Routes = [
   // canActivate: [AuthGuard]
 },
 {
+  path: 'upload',
+  component: UploadDataComponent,
+},
+{
   path: 'slides',
   component: SlideComponent,
   // canActivate: [AuthGuard]

@@ -1,6 +1,7 @@
 
 import { NgModule, Component } from '@angular/core';
 import { CommonMaterialModule } from '../common.material.module';
+import { StepperModule } from '../stepper/stepper.component';
 import { VideoPlayerModule } from '../video-player/video-player.component'
 
 @Component({
@@ -13,7 +14,7 @@ export class VideoComponent {
 }
 
 @NgModule({
-  imports:[CommonMaterialModule, VideoPlayerModule],
+  imports:[CommonMaterialModule, VideoPlayerModule, StepperModule],
   declarations:[VideoComponent]
 })
 export class VideoComponentModule {
