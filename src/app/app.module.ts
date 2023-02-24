@@ -17,7 +17,7 @@ import { GoogleAuthComponent } from './google-auth/google-auth.component';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
 
 import { CommonMaterialModule } from './common.material.module';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
 import { TestCaseTabComponent } from './test-case-tab/test-case-tab.component';
 import { TestCaseViewComponent } from './test-case-view/test-case-view.component';
 // import { NotesViewComponent } from './notes-view/notes-view.component';
