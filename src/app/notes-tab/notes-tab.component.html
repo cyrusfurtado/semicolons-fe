@@ -1,11 +1,11 @@
 <div class="notes-list">
     <div class="sidebar">
         <h2>Notes List</h2>
-        <mat-list *ngFor="let item of item_list">
+        <mat-list *ngFor="let item of item_list; let i = index;">
             <mat-list-item>
                 <span>{{ item.name }}</span>
                 <span class="spacer">
-                    <mat-icon class="spacer2" >preview</mat-icon>
+                    <mat-icon class="spacer2" (click)="preview(i)">preview</mat-icon>
                 </span>
             </mat-list-item>
             <mat-divider></mat-divider>

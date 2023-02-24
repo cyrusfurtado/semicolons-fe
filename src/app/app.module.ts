@@ -20,6 +20,8 @@ import { UploadDataComponent } from './upload-data/upload-data.component';
 
 import { CommonMaterialModule } from './common.material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { TestCaseTabComponent } from './test-case-tab/test-case-tab.component';
+import { TestCaseViewComponent } from './test-case-view/test-case-view.component';
 // import { NotesViewComponent } from './notes-view/notes-view.component';
 // import { NotesTabComponent } from './notes-tab/notes-tab.component';
 // import { NotesComponent } from './notes/notes.component';
@@ -29,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     UserLoginComponent,
     GoogleAuthComponent,
-    UploadDataComponent
+    UploadDataComponent,
   ],
   imports: [
     BrowserModule,
