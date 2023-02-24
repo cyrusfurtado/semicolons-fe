@@ -7,11 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class SlidesTabComponent {
   @Input() item_list: any = [
-    {name: "Slide 1", url: ""},
-    {name: "Slide 2", url: ""},
-    {name: "Slide 3", url: ""},
-    {name: "Slide 4", url: ""},
-    {name: "Slide 5", url: ""},
+    {name: "Slide 1", url: "../../assets/ppts/yourfile.pptx"},
+    {name: "Slide 2", url: "../../assets/ppts/yourfile.pptx"},
+    {name: "Slide 3", url: "../../assets/ppts/yourfile.pptx"},
+    {name: "Slide 4", url: "../../assets/ppts/yourfile.pptx"},
+    {name: "Slide 5", url: "../../assets/ppts/yourfile.pptx"},
   ]
   // test(num?: number)
   // {
@@ -21,6 +21,9 @@ export class SlidesTabComponent {
   download(url?: string)
   {
     console.log("Download -> ", url);
+    let a = document.createElement('a');
+    a.href = url || "";
+    a.click();
   }
 
   preview(url?: string)

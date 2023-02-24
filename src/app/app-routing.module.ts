@@ -20,8 +20,9 @@ const routes: Routes = [
   // canActivate: [AuthGuard]
 },
 {
-  path: 'upload',
+  path: 'dashboard',
   component: UploadDataComponent,
+  // canActivate: [AuthGuard]
 },
 {
   path: 'slides',
@@ -52,11 +53,11 @@ const routes: Routes = [
   redirectTo: 'landing',
   pathMatch: 'full',
 },
-{
-  path: 'upload',
-  component: UploadDataComponent,
-  // canActivate: [AuthGuard]
-},
+// {
+//   path: 'dashboard',
+//   component: UploadDataComponent,
+//   // canActivate: [AuthGuard]
+// },
 {
   path: 'login',
   component: UserLoginComponent,

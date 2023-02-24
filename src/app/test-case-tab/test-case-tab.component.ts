@@ -7,11 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class TestCaseTabComponent {
   @Input() item_list: any = [
-    {name: "Test Case 1", url: ""},
-    {name: "Test Case 2", url: ""},
-    {name: "Test Case 3", url: ""},
-    {name: "Test Case 4", url: ""},
-    {name: "Test Case 5", url: ""},
+    {name: "Test Case 1", url: "../../assets/sheets/sheet1.xlsx"},
+    {name: "Test Case 2", url: "../../assets/sheets/sheet1.xlsx"},
+    {name: "Test Case 3", url: "../../assets/sheets/sheet1.xlsx"},
+    {name: "Test Case 4", url: "../../assets/sheets/sheet1.xlsx"},
+    {name: "Test Case 5", url: "../../assets/sheets/sheet1.xlsx"},
   ]
   // test(num?: number)
   // {
@@ -21,6 +21,9 @@ export class TestCaseTabComponent {
   download(url?: string)
   {
     console.log("Download -> ", url);
+    let a = document.createElement('a');
+    a.href = url || "";
+    a.click();
   }
 
   preview(url?: string)

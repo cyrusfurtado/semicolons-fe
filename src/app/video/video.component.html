@@ -4,23 +4,54 @@
         <!-- <mat-grid-tile-header>Header</mat-grid-tile-header> -->
         <mat-card class="list-card">
             <mat-nav-list>
-                <mat-list-item>
+                <mat-list-item (click)="preview()" class="matlist-item">
                     <span matListItemIcon><mat-icon>video_file</mat-icon></span>
-                    <span matListItemTitle>Pepper</span>
-                    <span matListItemLine>Produced by a plant</span>
+                    <span matListItemTitle>Demo 1</span>
+                    <span matListItemLine>Produced by SS</span>
+                    <button mat-icon-button (click)="download('../../assets/video/test.mp4')" matListItemMeta>
+                        <span>
+                            <mat-icon color="primary">download</mat-icon>
+                            <span class="download">Download</span>
+                        </span>
+                    </button>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="preview()" class="matlist-item">
+                    <span matListItemIcon><mat-icon>video_file</mat-icon></span>
+                    <span matListItemTitle>Demo 2</span>
+                    <span matListItemLine>Created on PP</span>
+                    <button mat-icon-button (click)="download('../../assets/video/test.mp4')" matListItemMeta>
+                        <span>
+                            <mat-icon color="primary">download</mat-icon>
+                            <span class="download">Download</span>
+                        </span>
+                    </button>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="preview()" class="matlist-item">
+                    <span matListItemIcon><mat-icon>video_file</mat-icon></span>
+                    <span matListItemTitle>Demo 3</span>
+                    <span matListItemLine>Produced by RRR</span>
+                    <button mat-icon-button (click)="download('../../assets/video/test.mp4')" matListItemMeta>
+                        <span>
+                            <mat-icon color="primary">download</mat-icon>
+                            <span class="download">Download</span>
+                        </span>
+                    </button>
+                </mat-list-item>
+
+
+                <!-- <mat-list-item>
+                    <span matListItemIcon><mat-icon>video_file</mat-icon></span>
+                    <span matListItemTitle>Salt</span>
+                    <span matListItemLine>Extracted from sea water</span>
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item>
                     <span matListItemIcon><mat-icon>video_file</mat-icon></span>
-                <span matListItemTitle>Salt</span>
-                <span matListItemLine>Extracted from sea water</span>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <mat-list-item>
-                    <span matListItemIcon><mat-icon>video_file</mat-icon></span>
-                <span matListItemTitle>Paprika</span>
-                <span matListItemLine>Produced by dried and ground red peppers</span>
-                </mat-list-item>
+                    <span matListItemTitle>Paprika</span>
+                    <span matListItemLine>Produced by dried and ground red peppers</span>
+                </mat-list-item> -->
                 <mat-divider></mat-divider>
             </mat-nav-list>
         </mat-card>
@@ -32,4 +63,3 @@
         </mat-card>
     </mat-grid-tile>
 </mat-grid-list>
-

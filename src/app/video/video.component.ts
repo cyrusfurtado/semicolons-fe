@@ -10,7 +10,19 @@ import { VideoPlayerModule } from '../video-player/video-player.component'
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent {
+  
+  preview(url?: string)
+  {
+    console.log("Preview ", url);
+  }
 
+  download(url?: string)
+  {
+    let a = document.createElement('a');
+    a.href = url || "";
+    a.click();
+    a.remove();
+  }
 }
 
 @NgModule({
