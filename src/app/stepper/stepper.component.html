@@ -3,8 +3,9 @@
         <!-- <mat-card class="list-card"> -->
             <mat-stepper class="custom-stepper" [linear]="true" #stepper>
                 <mat-step [completed]="steps[0].completed" label="Upload transcript" state="upload"></mat-step>
-                <mat-step [completed]="steps[1].completed" label="Get slides" state="slides"></mat-step>
-                <mat-step [completed]="steps[2].completed" label="Get videos" state="videos"></mat-step>
+                <mat-step [completed]="steps[1].completed" label="Fill notes" state="notes"></mat-step>
+                <mat-step [completed]="steps[2].completed" label="Get slides" state="slides"></mat-step>
+                <mat-step [completed]="steps[3].completed" label="Get videos" state="videos"></mat-step>
                 <!-- <mat-step [completed]="steps[3].completed" label="Fill notes" state="notes"></mat-step>
                 <mat-step [completed]="steps[4].completed" label="Generate test cases" state="tests">
                   <ng-template matStepLabel>Done</ng-template>
