@@ -17,6 +17,12 @@ import { GoogleAuthComponent } from './google-auth/google-auth.component';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
 
 import { CommonMaterialModule } from './common.material.module';
+// import { HttpClientModule } from '@angular/common/http';
+import { TestCaseTabComponent } from './test-case-tab/test-case-tab.component';
+import { TestCaseViewComponent } from './test-case-view/test-case-view.component';
+// import { NotesViewComponent } from './notes-view/notes-view.component';
+// import { NotesTabComponent } from './notes-tab/notes-tab.component';
+// import { NotesComponent } from './notes/notes.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptorService } from './app-interceptor.service';
@@ -39,6 +45,7 @@ import { NotificationComponent } from './notification/notification.component';
     ReactiveFormsModule,
     FormsModule,
     NgxDocViewerModule,
+    HttpClientModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
