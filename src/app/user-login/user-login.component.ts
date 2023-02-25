@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserLoginComponent {
   hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
+  email = new FormControl('', [Validators.required]);
 
   constructor(private router: Router, private http: HttpClient) {
 
@@ -64,6 +64,12 @@ export class UserLoginComponent {
   //     console.error("Error: ", error);
   //   })
 
+    this.http.post('http://localhost:5000/login', {email, pass}).subscribe(response => {
+      console.log(response);
+    }, error => {
+      console.log(error);
+    })
+    
     if(email != 'semicolon@outlook.com') { alert('Invalid Credentials'); return;}
 
     localStorage.setItem('semicolon@outlook.com', pass);

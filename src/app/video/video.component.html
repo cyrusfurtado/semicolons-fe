@@ -3,11 +3,11 @@
         <!-- <mat-grid-tile-header>Header</mat-grid-tile-header> -->
         <mat-card class="list-card">
             <mat-nav-list>
-                <mat-list-item (click)="preview()" class="matlist-item">
+                <mat-list-item (click)="preview(0)" class="matlist-item">
                     <span matListItemIcon><mat-icon>video_file</mat-icon></span>
                     <span matListItemTitle>Demo 1</span>
                     <span matListItemLine>Produced by SS</span>
-                    <button mat-icon-button (click)="download('../../assets/video/test.mp4')" matListItemMeta>
+                    <button mat-icon-button (click)="download('../../assets/video/fridayoutput.mp4')" matListItemMeta>
                         <span>
                             <mat-icon color="primary">download</mat-icon>
                             <span class="download">Download</span>
@@ -15,11 +15,11 @@
                     </button>
                 </mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item (click)="preview()" class="matlist-item">
+                <mat-list-item (click)="preview(1)" class="matlist-item">
                     <span matListItemIcon><mat-icon>video_file</mat-icon></span>
                     <span matListItemTitle>Demo 2</span>
                     <span matListItemLine>Created on PP</span>
-                    <button mat-icon-button (click)="download('../../assets/video/test.mp4')" matListItemMeta>
+                    <button mat-icon-button (click)="download('../../assets/video/satoutput.mp4')" matListItemMeta>
                         <span>
                             <mat-icon color="primary">download</mat-icon>
                             <span class="download">Download</span>
@@ -27,7 +27,7 @@
                     </button>
                 </mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item (click)="preview()" class="matlist-item">
+                <!-- <mat-list-item (click)="preview()" class="matlist-item">
                     <span matListItemIcon><mat-icon>video_file</mat-icon></span>
                     <span matListItemTitle>Demo 3</span>
                     <span matListItemLine>Produced by RRR</span>
@@ -38,6 +38,7 @@
                         </span>
                     </button>
                 </mat-list-item>
+                <mat-divider></mat-divider> -->
 
 
                 <!-- <mat-list-item>
@@ -51,7 +52,6 @@
                     <span matListItemTitle>Paprika</span>
                     <span matListItemLine>Produced by dried and ground red peppers</span>
                 </mat-list-item> -->
-                <mat-divider></mat-divider>
             </mat-nav-list>
         </mat-card>
         <!-- <mat-grid-tile-footer>Footer</mat-grid-tile-footer> -->

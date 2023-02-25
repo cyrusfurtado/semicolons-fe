@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TranferDataToViewService {
-  private local_data = new BehaviorSubject("information");
+  private local_data = new BehaviorSubject("");
 
   constructor() { }
 

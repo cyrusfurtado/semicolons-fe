@@ -1,8 +1,9 @@
 
-import { NgModule, Component } from '@angular/core';
+import { NgModule, Component, Input } from '@angular/core';
 import { CommonMaterialModule } from '../common.material.module';
 import { StepperModule } from '../stepper/stepper.component';
 import { VideoPlayerModule } from '../video-player/video-player.component'
+import { TranferDataToViewService } from '../shared/tranfer-data-to-view.service';
 
 @Component({
   selector: 'app-presentation',
@@ -10,10 +11,20 @@ import { VideoPlayerModule } from '../video-player/video-player.component'
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent {
+  @Input() item_list: any = [{name: "Demo 1", url: "../../assets/video/fridayoutput.mp4"},
+    {name: "Demo 2", url: "../../assets/video/satoutput.mp4"}]
+
+  constructor(private tranfer: TranferDataToViewService) {
+    localStorage.setItem('video-link', '../../assets/video/fridayoutput.mp4');
+  }
   
-  preview(url?: string)
+  preview(i: number = -1)
   {
-    console.log("Preview ", url);
+    if(i == -1) return;
+
+    this.tranfer.setDataToShow(this.item_list[i]['url']);
+    localStorage.setItem('video-link', this.item_list[i]['url']);
+    // console.log("Preview ", url);
   }
 
   download(url?: string)
