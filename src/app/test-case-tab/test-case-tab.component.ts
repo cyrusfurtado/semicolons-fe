@@ -7,11 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class TestCaseTabComponent {
   @Input() item_list: any = [
-    {name: "Test Case 1", url: "../../assets/sheets/sheet1.xlsx"},
-    {name: "Test Case 2", url: "../../assets/sheets/sheet1.xlsx"},
-    {name: "Test Case 3", url: "../../assets/sheets/sheet1.xlsx"},
-    {name: "Test Case 4", url: "../../assets/sheets/sheet1.xlsx"},
-    {name: "Test Case 5", url: "../../assets/sheets/sheet1.xlsx"},
+    {name: "Own Cloud", url: "../../assets/sheets/OwnCloud.xlsx"},
+    // {name: "Test Case 2", url: "../../assets/sheets/sheet1.xlsx"},
+    // {name: "Test Case 3", url: "../../assets/sheets/sheet1.xlsx"},
+    // {name: "Test Case 4", url: "../../assets/sheets/sheet1.xlsx"},
+    // {name: "Test Case 5", url: "../../assets/sheets/sheet1.xlsx"},
   ]
   // test(num?: number)
   // {

@@ -20,10 +20,10 @@ export class VideoComponent {
   
   preview(i: number = -1)
   {
-    if(i == -1) return;
+    // if(i == -1) return;
 
-    this.tranfer.setDataToShow(this.item_list[i]['url']);
-    localStorage.setItem('video-link', this.item_list[i]['url']);
+    // this.tranfer.setDataToShow(this.item_list[i]['url']);
+    // localStorage.setItem('video-link', this.item_list[i]['url']);
     // console.log("Preview ", url);
   }
 

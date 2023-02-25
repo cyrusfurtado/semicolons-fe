@@ -8,7 +8,7 @@ import WebViewer from '@pdftron/webviewer';
   styleUrls: ['./slide-view.component.scss']
 })
 export class SlideViewComponent implements AfterViewInit {
-  @Input() file_url : string = "../../assets/ppts/yourfile.pptx";
+  @Input() file_url : string = "../../assets/ppts/SPRINT1-02172023.pptx";
   // doc: string = "https://docs.google.com/uc?export=download&id=10VGT0b8z0OuJnZ88SVLCwJBeVD4rVUd3";
   // test: URL = new URL(this.doc);
   // doc: string = "./yourfile.pptx";
