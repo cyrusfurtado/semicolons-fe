@@ -7,7 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 
 import {MatCardModule} from '@angular/material/card';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {MatDividerModule} from '@angular/material/divider';
@@ -34,7 +34,8 @@ import {MatSelectModule} from '@angular/material/select';
       MatCardModule,
       MatProgressSpinnerModule,
       MatStepperModule,
-      MatSelectModule
+      MatSelectModule,
+      MatSnackBarModule
     ],
     exports: [
         MatToolbarModule,

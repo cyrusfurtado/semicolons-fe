@@ -32,6 +32,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { DashStepperComponent } from './dash-stepper/dash-stepper.component';
 import { VideoPlayerModule } from "./video-player/video-player.component";
 import { CommonModule } from '@angular/common';
+import { SnackbarComponent } from './snackbar/snackbar.component';
 
 @NgModule({
     declarations: [
@@ -40,6 +41,7 @@ import { CommonModule } from '@angular/common';
         GoogleAuthComponent,
         NotificationComponent,
         DashStepperComponent,
+        SnackbarComponent
     ],
     providers: [{
             provide: HTTP_INTERCEPTORS,
@@ -63,7 +65,7 @@ import { CommonModule } from '@angular/common';
         FormsModule,
         NgxDocViewerModule,
         HttpClientModule,
-        VideoPlayerModule
+        VideoPlayerModule,
     ]
 })
 export class AppModule { }

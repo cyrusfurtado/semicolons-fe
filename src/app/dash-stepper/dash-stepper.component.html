@@ -86,7 +86,7 @@
         <button mat-raised-button color="warn" class="up-btn upb2" (click)="genslidebtn.click()">
           Generate Slides
         </button>
-        <input name="submit" #genslidebtn hidden value="Generate Slides" type="submit" mat-raised-button color="warn"
+        <input name="submit" #genslidebtn hidden value="Generate Slides" mat-raised-button color="warn"
           class="up-btn" (click)="slide()">
 
       <!-- </form> -->
@@ -113,8 +113,8 @@
       <div>
         <!-- <ng-template matStepLabel>Fill out your name</ng-template> -->
         <h4>Upload Test Cases</h4>
-        <input hidden type="file" #fileInput2>
-        <button class="btn-block" type="button" mat-raised-button color="warn" (click)="fileInput2.click()">Choose
+        <input hidden type="file" #fileInput3>
+        <button class="btn-block" type="button" mat-raised-button color="warn" (click)="fileInput3.click()">Choose
           File</button>
         <br>
         <button mat-raised-button color="primary" class="up-btn">Upload</button>
@@ -146,5 +146,7 @@
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
+
+  <!-- <app-snackbar (semit)="generateSnackbar($event)"></app-snackbar> -->
 
 </mat-stepper>

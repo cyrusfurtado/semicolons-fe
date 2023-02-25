@@ -12,7 +12,7 @@ import { TranferDataToViewService } from '../shared/tranfer-data-to-view.service
   styleUrls: ['./video-player.component.scss']
 })
 export class VideoPlayerComponent {
-  @Input() vid_url : any = "../../assets/video/fridayoutput.mp4";
+  @Input() vid_url : any = "../../assets/video/video_demo.mp4";
 
   video_url = "../../assets/video/fridayoutput.mp4";
 
