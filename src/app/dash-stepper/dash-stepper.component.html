@@ -45,8 +45,9 @@
       <mat-form-field appearance="fill" class="test">
         <mat-label>Your notes goes here</mat-label>
         <!-- <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required> -->
-        <textarea matInput placeholder="Generated Transcript..." required rows="10" class="fill-notes"></textarea>
+        <textarea matInput placeholder="Notes..." required rows="10" class="fill-notes"></textarea>
       </mat-form-field>
+      
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -59,7 +60,19 @@
   <mat-step>
     <ng-template matStepLabel>Generate Slide</ng-template>
     <div class="flex-div">
-      <button mat-raised-button matStepperPrevious color="warn" class="up-btn">Generate Slides</button>
+      <form class="example-form" name="genslideform">
+        <mat-form-field class="example-full-width">
+          <mat-label>Project Name</mat-label>
+          <input name="pname" matInput placeholder="Ex. Dummy project1" [(ngModel)]="pname" required>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="warn" class="up-btn" (click)="genslidebtn.click()">
+          Generate Slides
+        </button>
+        <input name="submit" #genslidebtn hidden value="Generate Slides" type="submit" mat-raised-button color="warn" class="up-btn" (click)="test()">
+          
+        </form>
+      <!-- <input type="text" placeholder="Project Name" > -->
     </div>
     <div>
       <button mat-button matStepperPrevious>Back</button>
@@ -79,10 +92,10 @@
         <input hidden type="file" #fileInput2>
         <button class="btn-block" type="button" mat-raised-button color="warn" (click)="fileInput2.click()">Choose File</button>
         <br>
-        <button mat-raised-button matStepperPrevious color="primary" class="up-btn">Upload</button>
+        <button mat-raised-button color="primary" class="up-btn">Upload</button>
       </div>
       <div>
-          <button mat-raised-button matStepperPrevious color="warn">Generate Demo</button>
+          <button mat-raised-button color="warn">Generate Demo</button>
       </div>
     </div>
     <div>

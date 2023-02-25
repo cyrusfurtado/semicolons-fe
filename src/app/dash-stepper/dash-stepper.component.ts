@@ -30,5 +30,22 @@ export class DashStepperComponent {
   });
   isLinear = false;
 
+  pname: string = "";
+
   constructor(private _formBuilder: FormBuilder) {}
+
+  slide()
+  {
+    console.log('Generate slide btn');
+  }
+
+  test()
+  {
+    if(this.pname == ""){
+      alert("Enter project name");
+    }
+    else {
+      console.log('submitted');
+    }
+  }
 }

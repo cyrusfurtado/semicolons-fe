@@ -23,7 +23,7 @@ const routes: Routes = [
 },
 {
   path: 'dashboard',
-  component: UploadDataComponent,
+  component: DashStepperComponent,
   canActivate: [AuthGuard]
 },
 {
@@ -55,11 +55,11 @@ const routes: Routes = [
   redirectTo: 'landing',
   pathMatch: 'full',
 },
-{
-  path: 'steper',
-  component: DashStepperComponent,
-  canActivate: [AuthGuard]
-},
+// {
+//   path: 'steper',
+//   component: DashStepperComponent,
+//   canActivate: [AuthGuard]
+// },
 {
   path: 'login',
   component: UserLoginComponent,
