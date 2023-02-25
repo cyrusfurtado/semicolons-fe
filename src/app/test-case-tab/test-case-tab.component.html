@@ -15,7 +15,7 @@
                 </span>
                 <span matListItemTitle>{{item.name}}</span>
                 <span matListItemLine>23-02-22 16:15:23</span>
-                <button mat-icon-button (click)="download('../../assets/sheets/sheet1.xlsx')" matListItemMeta>
+                <button mat-icon-button (click)="download(item.url)" matListItemMeta>
                     <span>
                         <mat-icon color="primary">download</mat-icon>
                         <span class="download">Download</span>

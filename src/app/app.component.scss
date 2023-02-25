@@ -42,3 +42,26 @@
   }
 }
 
+.flex-toolbar {
+  display: flex !important;
+  flex-direction: row !important;
+  // justify-content: space-between !important;
+
+  span {
+    justify-self: center !important;
+    margin-left: 15%;
+    padding-left: 120px;
+    text-transform: capitalize !important;
+  }
+}
+
+
+.logo {
+  width: 20px;
+  height: auto;
+
+  img {
+    width: 30px;
+    height: auto;
+  }
+}

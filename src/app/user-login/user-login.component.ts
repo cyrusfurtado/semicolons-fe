@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserLoginComponent {
   hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
+  email = new FormControl('', [Validators.required]);
 
   constructor(private router: Router, private http: HttpClient) {
 
@@ -41,8 +41,8 @@ export class UserLoginComponent {
       // check from response object if successfully logged in
       // set the JWT tokem sent by backend if successfully logged in.
       // localStorage.setItem('demo_assist_token', "Value of JWT token here");
-      // route to landing page if logged in. else route to login page again
-      this.router.navigateByUrl('landing')
+      // route to dashboard page if logged in. else route to login page again
+      this.router.navigateByUrl('dashboard')
 
     }, error => {
       console.error('Error while logging in: ', error);
@@ -52,7 +52,7 @@ export class UserLoginComponent {
 
   //Demo code on how to unpack response object
   //Use above login() method instead when backend is ready
-  login2()
+  login2(email:string, pass: string)
   {
   //   console.log("Inside login 2");
   //   this.http.get('http://localhost:8080/').subscribe(response => {
@@ -63,5 +63,18 @@ export class UserLoginComponent {
   //   }, error => {
   //     console.error("Error: ", error);
   //   })
+
+    this.http.post('http://localhost:5000/login', {email, pass}).subscribe(response => {
+      console.log(response);
+    }, error => {
+      console.log(error);
+    })
+    
+    if(email != 'semicolon@outlook.com') { alert('Invalid Credentials'); return;}
+
+    localStorage.setItem('semicolon@outlook.com', pass);
+
+    this.router.navigate(['dashboard']);
+
   }
 }
