@@ -211,6 +211,11 @@ export class DashStepperComponent {
   openSnackBar(message: string, action: string, config?: object) {
     this.snackBar.open(message, action,config);
   }
+
+  upload_transcript()
+  {
+    setTimeout(() => this.openSnackBar("Uploaded!!!", "Close"), 600);
+  }
 }
 
 
