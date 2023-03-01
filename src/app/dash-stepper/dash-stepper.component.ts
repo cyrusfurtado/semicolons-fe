@@ -11,7 +11,7 @@
 
 
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { VideoComponent } from '../video/video.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -34,6 +34,7 @@ interface Voice_Actor {
   // encapsulation: ViewEncapsulation.None,
 })
 export class DashStepperComponent {
+  myForm: FormGroup;
 
   
   @ViewChild('servermsg1') s_msg1!:ElementRef;
@@ -57,20 +58,28 @@ export class DashStepperComponent {
   hide_spinner2: boolean = true;
   hide_spinner3: boolean = true;
   hide_video: boolean = true;
+  hide_video2: boolean = true;
+  hide_video3: boolean = true;
   video_url = "";
   select_value?:string;
   value1 = "../../assets/video/video_demo.mp4";
+  value2 = "../../assets/video/fridayoutput.mp4";
+  value3 = "../../assets/video/satoutput4.mp4";
   audio_hide = true;
   gen_trans : string = "";
 
 
   voices: Voice_Actor[] = [
     { value: 'Girish Bharne', viewValue: 'Girish Bharne' },
-    // { value: 'Sailee', viewValue: 'Sailee' },
+    { value: 'Siddesh Sangodkar', viewValue: 'Siddesh Sangodkar' },
+    { value: 'Sailee', viewValue: 'Sailee' },
   ];
 
   constructor(private _formBuilder: FormBuilder, private router: Router, private snackBar: MatSnackBar) { 
     // this.s_msg1.nativeElement.value = "Analyzing";
+    this.myForm = _formBuilder.group({
+      transcript: ''
+    });
   }
 
   showAudio()
@@ -84,11 +93,12 @@ export class DashStepperComponent {
     // if(nameNotSet){return;}
     // this.showSpinner1(2);
     // setTimeout(() => this.hideSpinner1(2), 5000);
-    setTimeout(() => this.openSnackBar("Analyzing Transcript", "Close", this.snackbar_option), 100);
-    setTimeout(() => this.openSnackBar("Analyzing Done", "Close", this.snackbar_option), 5000);
-    setTimeout(() => this.openSnackBar("Analyzing Database", "Close"), 8000);
-    setTimeout(() => {this.openSnackBar("Slides Ready!!!", "Close")}, 11000);
-    setTimeout(() => {this.router.navigate(['slides'])}, 11000);
+    setTimeout(() => this.openSnackBar("In progress", "Close", this.snackbar_option), 100);
+    // setTimeout(() => this.openSnackBar("Analyzing Transcript", "Close", this.snackbar_option), 100);
+    // setTimeout(() => this.openSnackBar("Analyzing Done", "Close", this.snackbar_option), 5000);
+    // setTimeout(() => this.openSnackBar("Analyzing Database", "Close"), 8000);
+    setTimeout(() => {this.openSnackBar("Slides Ready!!!", "Close")}, 5000);
+    setTimeout(() => {this.router.navigate(['slides'])}, 5500);
   }
 
   // test() {
@@ -127,14 +137,23 @@ export class DashStepperComponent {
     // this.openSnackBar("Preparing Video", "Close");
     // this.openSnackBar("Preparing Complete", "Close");
 
-    setTimeout(() => this.openSnackBar("Analyzing Test Cases", "Close"), 100);
+    setTimeout(() => this.openSnackBar("In progress", "Close"), 100);
+    // setTimeout(() => this.openSnackBar("Analyzing Test Cases", "Close"), 100);
     // setTimeout(() => this.openSnackBar("Analyzing Done", "Close"), 5000);
     // setTimeout(() => this.openSnackBar("Generating Dialog", "Close"), 8000);
-    setTimeout(() => this.openSnackBar("Generating Script and Dialog", "Close"), 8000);
-    setTimeout(() => {this.openSnackBar("Synthesizing Voice", "Close")}, 12000);
-    setTimeout(() => {this.openSnackBar("Video Ready!!!", "Close")}, 16000);
+    // setTimeout(() => this.openSnackBar("Generating Script and Dialog", "Close"), 8000);
+    // setTimeout(() => {this.openSnackBar("Synthesizing Voice", "Close")}, 12000);
+    setTimeout(() => {this.openSnackBar("Video Ready!!!", "Close")}, 5000);
     // setTimeout(() => {this.router.navigate(['videos'])}, 17000);
-    setTimeout(()=> {this.hide_video = false;}, 17000);
+    if(this.select_value == 'Girish Bharne')
+      setTimeout(()=> {this.hide_video = false;}, 5500);
+
+    // console.log(this.select_value);
+    if(this.select_value == 'Siddesh Sangodkar')
+      setTimeout(()=> {this.hide_video2 = false;}, 5500);
+
+    if(this.select_value == 'Sailee')
+      setTimeout(()=> {this.hide_video3 = false;}, 5500);
     
     // this.openSnackBar("Analyzing Transcript", "Close");
     // this.openSnackBar("Analyzing Complete", "Close");

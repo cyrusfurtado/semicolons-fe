@@ -39,9 +39,9 @@
       <vg-volume></vg-volume>
       <vg-fullscreen></vg-fullscreen>
     </vg-controls>
-    <div id="">
+    <div id="videoCon">
       <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto" crossorigin>
-        <source [src]="vid_url" type="video/mp4" id="vidsrc">
+        <source [src]="video_url" type="video/mp4" id="vidsrc">
         <!-- <source src="https://www.youtube.com/watch?v=WD2nz_IKyJM" type="video/mp4">
         <source src="https://vimeo.com/354623299" type="video/mp4"> -->
         <!-- <source src="http://static.videogular.com/assets/videos/videogular.ogg" type="video/ogg">
@@ -54,3 +54,5 @@
     </div>
   </vg-player>
 </div>
+
+<button (click)="changeVid()">Change</button>

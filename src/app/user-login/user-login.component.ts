@@ -4,6 +4,7 @@ import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { HttpClient } from '@angular/common/http';
+import axios from 'axios';
 
 /** @title Form field with error messages */
 @Component({
@@ -52,7 +53,7 @@ export class UserLoginComponent {
 
   //Demo code on how to unpack response object
   //Use above login() method instead when backend is ready
-  login2(email:string, pass: string)
+  login2(username:string, password: string)
   {
   //   console.log("Inside login 2");
   //   this.http.get('http://localhost:8080/').subscribe(response => {
@@ -64,15 +65,46 @@ export class UserLoginComponent {
   //     console.error("Error: ", error);
   //   })
 
-    this.http.post('http://localhost:5000/login', {email, pass}).subscribe(response => {
-      console.log(response);
-    }, error => {
-      console.log(error);
-    })
-    
-    if(email != 'semicolon@outlook.com') { alert('Invalid Credentials'); return;}
+    // this.http.post<{access_token?: string, error?: string}>('http://localhost:5000/login', {username, password}).subscribe(response => {
+    //   console.log(response);
 
-    localStorage.setItem('semicolon@outlook.com', pass);
+    //   if(!!response.error){
+    //     console.log("login failed. Invalid credentials");
+        
+    //   } else if(!!response.access_token){
+    //     console.log("login success");
+    //   } else {
+    //     console.log("Oops! Something went wrong. Please try again.");
+    //   }
+
+
+    // }, error => {
+    //   console.log("This is not what u want...", error);
+    // })
+
+    // axios({
+    //   method: 'post',
+    //   url: 'http://localhost:5000/login',
+    //   data: {username, password},
+    //   headers: {"Content-Type": "application/json"}
+    // })
+    // .then((response: any) => {
+    //   console.log(response);
+    //   if(!!response['data']['access_token']) {
+    //     console.log(response['data']['access_token']);
+    //   }
+    // })
+    // .catch((error: any) => {
+    //   console.error(error);
+    // })
+
+
+
+
+    
+    if(username != 'semicolon@outlook.com') { alert('Invalid Credentials'); return;}
+
+    localStorage.setItem('semicolon@outlook.com', password);
 
     this.router.navigate(['dashboard']);
 

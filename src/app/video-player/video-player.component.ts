@@ -14,7 +14,8 @@ import { TranferDataToViewService } from '../shared/tranfer-data-to-view.service
 export class VideoPlayerComponent {
   @Input() vid_url : any = "../../assets/video/video_demo.mp4";
 
-  video_url = "../../assets/video/fridayoutput.mp4";
+  video_url = "../../assets/video/satoutput4.mp4";
+  video_url2 = "../../assets/video/fridayoutput.mp4";
 
   constructor(private transfer: TranferDataToViewService) {
     // this.transfer.getInfo()
@@ -50,6 +51,23 @@ export class VideoPlayerComponent {
   //   }
   // }
 
+  changeVid()
+  {
+    // let videoCon = document.getElementById('videoCon');
+    // let source: any = document.getElementById('vidsrc');
+    // source!['src'] = this.video_url2;
+    // let video = document.getElementById('singleVideo');
+    // video?.remove();
+
+    // let newVid = document.createElement('video');
+    // newVid.id = "singleVideo";
+    // let source = document.createElement('source');
+    // source.src = this.video_url2;
+    // source.type = "video/mp4";
+    // videoCon?.appendChild(newVid);
+
+    
+  }
 
 }
 

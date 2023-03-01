@@ -37,7 +37,7 @@ const routes: Routes = [
   canActivate: [AuthGuard]
 },
 {
-  path: 'meet-notes',
+  path: 'notes',
   component: NotesComponent,
   canActivate: [AuthGuard]
 },
