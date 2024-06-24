@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, NavigationEnd, NavigationExtras } from '@angular/router';
 import { ApiService } from './api.service';
 import { HelperService } from './helper.service';
+import { AuthService } from './shared/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent {
   routes: any[] = []
   hideLoader = true
 
-  constructor(private router: Router, private helper: HelperService, private api: ApiService) {
+  constructor(private router: Router, private helper: HelperService, private api: ApiService, private auth: AuthService) {
     const routes = this.router.config
 
     const skipList = ['landing','login','', '**']
@@ -100,5 +101,11 @@ export class AppComponent {
       // state: { data: 'some data' }
     };
     this.router.navigate([{ outlets: { global: ['login'] } }], navigationExtras);
+  }
+
+  signout()
+  {
+    this.auth.logout();
+    // this.router.navigate(['login']);
   }
 }

@@ -18,16 +18,16 @@
   <div class="example-container" id="container1">
     <mat-icon class="mat-icon">person</mat-icon>
     <mat-form-field appearance="fill" class="center">
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      <mat-label>Enter your username</mat-label>
+      <input #logemail matInput placeholder="pat@example.com"  required>
+      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
     </mat-form-field>
   </div>
   <div class="example-container">
     <mat-icon class="mat-icon">lock</mat-icon>
     <mat-form-field appearance="fill">
       <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
+      <input matInput #logpass [type]="hide ? 'password' : 'text'">
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
@@ -40,7 +40,7 @@
       <button 
         mat-raised-button 
         color="primary"
-        (click)="login2()"
+        (click)="login2(logemail.value, logpass.value)"
       >Login</button>
       <!-- <button mat-raised-button color="accent">Accent</button>
       <button mat-raised-button color="warn">Warn</button>

@@ -10,13 +10,16 @@ export class AuthService {
 
   IsLoggedIn() 
   {
-    return !!localStorage.getItem('demo_assist_token');
+    if(!!localStorage.getItem('semicolon@outlook.com') && localStorage.getItem('semicolon@outlook.com') == '12345') return true;
+    // return !!localStorage.getItem('demo_assist_token');
+    return false;
   }
 
   // Call this method to perform logout throughout this application.
   logout()
   {
-    localStorage.removeItem('demo_assist_token');
+    // localStorage.removeItem('demo_assist_token');
+    localStorage.removeItem('semicolon@outlook.com');
     this.router.navigate(['login']);
   }
 }

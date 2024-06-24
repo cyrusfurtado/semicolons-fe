@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SlidesTabComponent {
   @Input() item_list: any = [
-    {name: "Slide 1", url: "../../assets/ppts/yourfile.pptx"},
+    {name: "Slide 1", url: "../../assets/ppts/SPRINT1- 25 Feb  2023.pptx.pptx"},
     {name: "Slide 2", url: "../../assets/ppts/yourfile.pptx"},
     {name: "Slide 3", url: "../../assets/ppts/yourfile.pptx"},
     {name: "Slide 4", url: "../../assets/ppts/yourfile.pptx"},
